@@ -107,8 +107,7 @@ static int setup_input_dev(void)
     wmi_input_dev = input_allocate_device();
     if (! wmi_input_dev) {
         pr_err("Failed to allocate input device\n");
-        err = -ENOMEM;
-        goto err;
+        return -ENOMEM;
     }
 
     wmi_input_pdev = platform_device_register_simple("yoga", -1, NULL, 0);
@@ -123,15 +122,11 @@ static int setup_input_dev(void)
     err = input_register_device(wmi_input_dev);
     if (err) {
         pr_err("Failed to register input device\n");
-        goto err_free_dev;
+        input_free_device(wmi_input_dev);
+        return err;
     }
 
     return 0;
-
-err_free_dev:
-    input_free_device(wmi_input_dev);
-err:
-    return err;
 }
 
 static void wmi_notify(u32 value, void *context)
