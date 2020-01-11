@@ -1,7 +1,7 @@
 TARGET_MODULE:=yoga-usage-mode
 obj-m := $(TARGET_MODULE).o
 
-KVER=$(shell uname -r)
+KVER?=$(shell uname -r)
 KDIR=/lib/modules/$(KVER)/build
 MDIR=/lib/modules/$(KVER)/kernel/platform/x86
 
