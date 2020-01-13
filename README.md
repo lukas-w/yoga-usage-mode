@@ -5,7 +5,7 @@ Usage:
 * `make` to build
 * `make load` as root to load the module for testing
 * `make unload` as root to unload the module
-* `make install` as rooot to install
+* `make install` as root to install
 
 Add `yoga-usage-mode` to e.g. `/etc/modules-load.d/modules.conf` to load automatically.
 
