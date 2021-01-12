@@ -1,4 +1,4 @@
-ACPI driver Linux kernel module for Yoga C940 usage mode sensor to detect whether the device is in tablet or laptop mode. Creates an input device reporting `SW_TABLET_MODE` which libinput uses to disable keyboard and touchpad when tablet mode is entered; can also be used with https://github.com/alesguzik/linux_detect_tablet_mode. 
+ACPI driver Linux kernel module for Yoga C940 usage mode sensor to detect whether the device is in tablet or laptop mode. Creates an input device reporting `SW_TABLET_MODE` which libinput uses to disable keyboard and touchpad when tablet mode is entered; can also be used with https://github.com/alesguzik/linux_detect_tablet_mode. The module has been reported to work with the IdeaPad Flex 14API (AMD model) as well.
 
 Arch Linux users can install this using the AUR package [`yoga-usage-mode-dkms-git`](https://aur.archlinux.org/packages/yoga-usage-mode-dkms-git/).
 
